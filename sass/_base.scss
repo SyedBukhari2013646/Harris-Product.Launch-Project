@@ -1,0 +1,37 @@
+@use "shared";
+
+* {
+  //universal styling
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //1rem = 10px, 10px/16px = 62.5%
+  font-family: var(--font-primary);
+
+  @include shared.respond(bp-medium) {
+    font-size: 50.5%; //1rem = 10px, 10px/16px = 62.5%
+  }
+
+  @include shared.respond(bp-small) {
+    font-size: 45.5%; //1rem = 10px, 10px/16px = 62.5%
+  }
+
+  @include shared.respond(bp-smallest) {
+    font-size: 40%; //1rem = 10px, 10px/16px = 62.5%
+  }
+}
+
+.container {
+  display: grid;
+
+  grid-template-rows: repeat(7, min-content);
+}

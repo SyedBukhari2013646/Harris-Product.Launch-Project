@@ -1,0 +1,114 @@
+@use "shared";
+
+.icons {
+  width: 2.3rem;
+  height: 3rem;
+}
+
+/////////////////////////////////////////
+///////////////logos/////////////////////
+/////////////////////////////////////////
+
+.logo {
+  font-size: 1.8rem;
+  display: block;
+  color: var(--color-grey-light-3);
+  z-index: 100;
+
+  transition: all 0.3s;
+
+  &:hover {
+    color: var(--color-grey-light-1);
+  }
+}
+
+.logo-black {
+  font-size: 1.8rem;
+  display: block;
+  color: var(--color-grey-dark-1);
+  z-index: 100;
+
+  transition: all 0.3s;
+
+  &:hover {
+    color: var(--color-grey-dark-2);
+  }
+}
+
+/////////////////////////////////////////
+///////////////btnss/////////////////////
+/////////////////////////////////////////
+
+.btn {
+  padding: 1.3rem 2.6rem;
+  border-radius: 5000rem;
+  font-size: 1.7rem;
+
+  outline: none;
+  border: none;
+
+  transition: all 0.3s;
+
+  &__blue {
+    background-color: rgb(1, 120, 237);
+    color: var(--color-grey-light-3);
+
+    &:hover {
+      background-color: rgb(0, 110, 219);
+    }
+
+    &-outline {
+      background: none;
+      color: rgb(1, 120, 237);
+      border: 1px solid rgb(1, 120, 237);
+
+      &:hover {
+        background-color: rgb(1, 120, 237);
+        color: var(--color-grey-light-1);
+      }
+    }
+  }
+}
+
+/////////////////////////////////////////
+///////////////radio btns////////////////
+/////////////////////////////////////////
+
+input {
+  accent-color: black;
+  width: 2rem;
+  height: 2rem;
+}
+
+label {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.radio {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: 2rem;
+
+  &-p {
+    font-size: 1.5rem;
+    color: var(--color-grey-dark-3);
+  }
+
+  &-both {
+    display: flex;
+    align-content: center;
+    gap: 1rem;
+  }
+}
+
+.radio__button {
+  border: 1px solid var(--color-grey-dark-3);
+  padding: 3rem 2rem;
+
+  &:focus,
+  &:hover,
+  &:active {
+    border: 1px solid orangered;
+  }
+}

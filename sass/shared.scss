@@ -1,0 +1,79 @@
+@mixin respond($breakpoint) {
+  @if $breakpoint == bp-largest {
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == bp-large {
+    @media only screen and (max-width: 62.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == bp-medium {
+    @media only screen and (max-width: 50em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == bp-small {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == bp-smallest {
+    @media only screen and (max-width: 31.25em) {
+      @content;
+    }
+  }
+
+  ////////////////////////////////////////////////
+  ///////////////For height///////////////////////
+  ////////////////////////////////////////////////
+
+  @if $breakpoint == bp-1000 {
+    @media only screen and (max-height: 62.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == bp-900 {
+    @media only screen and (max-height: 56.25em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == bp-800 {
+    @media only screen and (max-height: 50em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == bp-700 {
+    @media only screen and (max-height: 43.75em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == bp-600 {
+    @media only screen and (max-height: 37.5em) {
+      @content;
+    }
+  }
+}
+
+///////////////////////////////////////////////
+////////////Media Queries//////////////////////
+///////////////////////////////////////////////
+
+//$bp-largest = 1200 / 16 = 75em;
+
+//$bp-large = 1000 / 16 = 62.5em;
+
+//$bp-medium = 800 / 16 = 50em;
+
+//$bp-small = 600 / 16 = 37.5em;
+
+//$bp-smallest = 400 / 16 = 50em;

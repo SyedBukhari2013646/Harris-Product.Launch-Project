@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Preconnect to optimize font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="sass/main.css" />
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="img/istockphoto-458733623-1024x1024.jpg"
+    />
+
+    <title>Survey Form &mdash; If we want to know about us</title>
+  </head>
+
+  <body>
+    <section class="survey">
+      <div class="survey__data survey__data2">
+        <div class="survey__data-head survey__data2-head">
+          <h2 class="survey__data-iphone">iphone 17</h2>
+          <a href="index.html"
+            ><ion-icon
+              name="close-outline"
+              class="survey__data-close"
+            ></ion-icon
+          ></a>
+        </div>
+
+        <div class="survey__data2-body">
+          <form class="survey__data2-form" action="survey-3.html">
+            <div class="survey__data2-client">YOUR INFORMATION</div>
+
+            <input
+              type="text"
+              name="firstname"
+              placeholder="FULL NAME"
+              class="survey__data2-name"
+              required
+            />
+
+            <input
+              type="email"
+              name="full email"
+              placeholder="EMAIL"
+              class="survey__data2-name"
+              required
+            />
+
+            <input
+              type="number"
+              name="phone number"
+              placeholder="PHONE NUMBER"
+              class="survey__data2-name"
+              required
+            />
+
+            <input
+              type="text"
+              name="Company name"
+              placeholder="COMPANY NAME"
+              class="survey__data2-name"
+              required
+            />
+
+            <input
+              type="text"
+              name="Website"
+              placeholder="WEBSITE"
+              class="survey__data2-name"
+              required
+            />
+
+            <input
+              type="text"
+              name="Refered"
+              placeholder="WHO REFFERED YOU TO US?"
+              class="survey__data2-name"
+              required
+            />
+
+            <input
+              type="text"
+              name="REQUIRMENTS"
+              placeholder="REQUIREMENTS"
+              class="survey__data2-name"
+              required
+            />
+
+            <div class="survey__data2-terms">
+              <input type="checkbox" id="terms" required /><label for="terms"
+                >I Agree to the privacy policy and terms&conditions</label
+              >
+            </div>
+
+            <a href="survey-3.html" class="survey__data-body-link"
+              ><button
+                class="survey__data-body-btn"
+                href="survey-3.html"
+                type="submit"
+                value="submit"
+              >
+                SUBMIT
+              </button></a
+            >
+          </form>
+        </div>
+      </div>
+
+      <div class="survey__img">
+        <img
+          src="img/survey/survey-0.png"
+          rel="an img"
+          class="survey__img-img"
+        />
+      </div>
+    </section>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

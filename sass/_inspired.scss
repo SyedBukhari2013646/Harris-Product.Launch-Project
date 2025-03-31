@@ -1,0 +1,112 @@
+@use "shared";
+
+.inspired {
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.65)
+    ),
+    url(../img/inspired/inpired.main.jpg);
+  height: 200vh; /* Adjusted height */
+  width: 100vw;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+
+  font-size: 10rem;
+  color: #fff;
+
+  position: relative;
+
+  @include shared.respond(bp-large) {
+    height: 160vh;
+  }
+
+  @include shared.respond(bp-small) {
+    height: 88vh;
+  }
+
+  @include shared.respond(bp-small) {
+    display: block;
+  }
+}
+
+.inspired__main {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Ensure text is centered horizontally */
+
+  &-welcome {
+    @include shared.respond(bp-large) {
+      font-size: 7rem;
+    }
+
+    @include shared.respond(bp-small) {
+      margin-top: 30vh;
+    }
+  }
+
+  &-btn {
+    justify-self: center;
+    margin-top: 2rem;
+  }
+}
+
+.inspired__main-intel {
+  background: linear-gradient(94deg, #0090f7, #ba62fc, #f2416b, #f55600);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 2rem;
+
+  display: inline-block; /* Ensures the element behaves as inline, which helps with centering */
+  text-align: center; /* Centers the text horizontally */
+  justify-self: center; /* Centers the element in grid */
+
+  @include shared.respond(bp-small) {
+    font-size: 4rem;
+  }
+}
+
+.inspired__main2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  @include shared.respond(bp-small) {
+    display: none;
+  }
+  &-color {
+    background: linear-gradient(94deg, #0090f7, #ba62fc, #f2416b, #f55600);
+    background-clip: text;
+    color: transparent;
+    padding-bottom: 10rem;
+    z-index: 100;
+
+    font-size: 6rem;
+  }
+
+  &-img {
+    position: absolute;
+    width: 110%;
+    transform: rotate(90deg) translateY(40vw) translateX(-30%);
+
+    @include shared.respond(bp-largest) {
+      transform: rotate(90deg) translateY(31vw) translateX(-30%);
+    }
+
+    @include shared.respond(bp-largest) {
+      transform: rotate(90deg) translateY(35vw) translateX(-30%);
+    }
+
+    @include shared.respond(bp-small) {
+      display: none;
+    }
+  }
+}

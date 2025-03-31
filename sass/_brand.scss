@@ -1,0 +1,108 @@
+@use "shared";
+
+.brand {
+  height: 125vh;
+  width: 100%;
+  padding: 1rem;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+
+  @include shared.respond(bp-large) {
+    height: 99vh;
+  }
+
+  @include shared.respond(bp-large) {
+    height: min-content;
+    display: block;
+  }
+
+  &__pods,
+  &__mac,
+  &__tab,
+  &__watch {
+    background-size: cover;
+    background-position: center;
+    transition: all 0.3s;
+    overflow: hidden;
+
+    display: grid;
+    align-content: center;
+    text-align: center;
+    align-items: center;
+    row-gap: 1rem;
+
+    @include shared.respond(bp-large) {
+      margin-bottom: 2rem;
+    }
+
+    @include shared.respond(bp-large) {
+      height: 70vh;
+    }
+
+    &:hover {
+      transform: scale(1.001);
+      box-shadow: 1px 3px 10px 1px rgba(0, 0, 0, 0.75);
+    }
+  }
+
+  &__pods {
+    background-image: url(../img/brands/brand__pods.jpg);
+    color: var(--color-grey-light-1);
+
+    padding-top: 30%;
+
+    &-h2 {
+      font-size: 4.5rem;
+      font-weight: 600;
+    }
+
+    &-p {
+      font-size: 2rem;
+      font-weight: 350;
+      margin-bottom: 0.5rem;
+    }
+
+    &-btn {
+      justify-self: center;
+
+      display: flex;
+      gap: 1rem;
+
+      & > * {
+        padding: 1rem 2rem;
+        font-weight: 300;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  &__mac {
+    background-image: url(../img/brands/brand__mac.jpg);
+    padding-bottom: 45%;
+
+    @include shared.respond(bp-small) {
+      padding-bottom: 45vh;
+    }
+  }
+
+  &__tab {
+    background-image: url(../img/brands/brand__tab.jpg);
+    padding-bottom: 45%;
+
+    @include shared.respond(bp-small) {
+      padding-bottom: 45vh;
+    }
+  }
+
+  &__watch {
+    background-image: url(../img/brands/brand__watch.jpg);
+    padding-bottom: 45%;
+
+    @include shared.respond(bp-small) {
+      padding-bottom: 45vh;
+    }
+  }
+}

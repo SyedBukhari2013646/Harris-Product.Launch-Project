@@ -1,0 +1,41 @@
+@use "shared";
+
+.guide {
+  height: 100vh;
+  width: 100vw;
+  padding: 8rem;
+
+  display: grid;
+  grid-template-rows: 30% 70%;
+  align-items: center;
+  justify-content: center;
+
+  @include shared.respond(bp-largest) {
+    height: 70vh;
+    padding: 2rem;
+    grid-template-rows: 30% 70%;
+  }
+
+  &__h3 {
+    font-size: 5rem;
+    font-weight: 600;
+    padding-right: 60%;
+    line-height: 1.1;
+    letter-spacing: -0.05em;
+
+    @include shared.respond(bp-large) {
+      padding-right: 30%;
+    }
+
+    @include shared.respond(bp-small) {
+      padding-right: 0;
+    }
+  }
+
+  &__img {
+    height: min-content;
+    width: 100%;
+    background-position: center;
+    background-color: red;
+  }
+}
